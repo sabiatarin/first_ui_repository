@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hospital Management System</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/jquery-ui.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jssor.slider-24.1.5.min.js" type="text/javascript"></script><script src="js/Script.js"></script>
+		<script type="text/javascript">
+        jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 10,
+                $SpacingX: 8,
+                $SpacingY: 8,
+                $Align: 360
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 800);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*responsive code end*/
+        };
+    </script>
+	</head>
+	<body>
+		<header>
+			<div class="clock">
+			    <div id="Date"></div>
+			    <ul>
+			        <li id="hours"></li>
+			        <li id="point">:</li>
+			        <li id="min"></li>
+			        <li id="point">:</li>
+			        <li id="sec"></li>
+			    </ul>
+			</div>
+			<nav>
+				<ul>
+					<li class="doctorShow activeli">Doctors</li>
+					<li class="patientShow">Patients</li>
+					<li class="appointmentShow">Appointments</li>
+				</ul>
+				<div class="adminLogout">
+					<span>Log Out</span>
+				</div>
+			</nav>
+		</header>
+
+		<main class="mainAdmin">
+			
+			<section class="doctorRecords">
+				<p class="list">Doctors Lists</p>
+				<p class="addNew">Add New Records</p>
+				<table class="updateData">
+					<tr>
+						<th>SL NO</th>
+						<th>Doctor Name</th>
+						<th>Specialization</th>
+						<th>Options</th>
+					</tr>
+					<tr>
+						<td>01</td>
+						<td>Dr. Shammy</td>
+						<td>Gynecologist</td>
+						<td>Modify | Delete</td>
+					</tr>
+					<tr>
+						<td>02</td>
+						<td>Dr. Shuvro</td>
+						<td>Anesthesian</td>
+						<td>Modify | Delete</td>
+					</tr>
+				</table>				
+				
+				<table class="deleteTable updateData">
+					<caption>Deleted Records</caption>
+					<tr>
+						<th>SL NO</th>
+						<th>Doctor Name</th>
+						<th>Specialization</th>
+						<th>Options</th>
+					</tr>
+				</table>
+			</section>
+			
+			<section class="patientRecords">
+				<p class="list">Patients Lists</p>
+				<p class="addNew">Add New Records</p>
+				<table class="updateData">
+					<tr>
+						<th>SL NO</th>
+						<th>Patient Name</th>
+						<th>Address</th>
+						<th>Sex</th>
+						<th>Options</th>
+					</tr>
+				</table>
+				
+				<table class="deleteTable updateData">
+					<caption>Deleted Records</caption>
+					<tr>
+						<th>SL NO</th>
+						<th>Patient Name</th>
+						<th>Address</th>
+						<th>Sex</th>
+						<th>Options</th>
+					</tr>
+				</table>
+			</section>
+			
+			<section class="appointmentRecords">
+				<p class="list">Appointments Lists</p>
+				<p class="addNew">Add New Records</p>
+				<table class="updateData">
+					<tr>
+						<th>SL NO</th>
+						<th>Patient Name</th>
+						<th>Doctor Name</th>
+						<th>Time</th>
+						<th>Date</th>
+						<th>Options</th>
+					</tr>
+				</table>
+				
+				<table class="deleteTable updateData">
+					<caption>Deleted Records</caption>
+					<tr>
+						<th>SL NO</th>
+						<th>Patient Name</th>
+						<th>Doctor Name</th>
+						<th>Time</th>
+						<th>Date</th>
+						<th>Options</th>
+					</tr>
+				</table>
+			</section>	
+
+			<div class="carousel">
+				<div id="jssor_1" style="position:relative;margin:40px auto;top:-330px;left:-15px;width:800px;height:510px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+			        <!-- Loading Screen -->
+			        <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
+			        <div data-u="slides" style="cursor:default;position:relative;top:-26px;left:0px;width:800px;height:406px;overflow:hidden;">
+			            <div>
+			                <img data-u="image" src="img/2.jpg" />
+			                <img data-u="thumb" src="img/3.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/4.jpg" />
+			                <img data-u="thumb" src="img/5.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/6.jpg" />
+			                <img data-u="thumb" src="img/7.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/8.jpg" />
+			                <img data-u="thumb" src="img/1.jpg" />
+			            </div>
+			             <div>
+			                <img data-u="image" src="img/2.jpg" />
+			                <img data-u="thumb" src="img/3.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/4.jpg" />
+			                <img data-u="thumb" src="img/5.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/6.jpg" />
+			                <img data-u="thumb" src="img/7.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/8.jpg" />
+			                <img data-u="thumb" src="img/1.jpg" />
+			            </div>
+			             <div>
+			                <img data-u="image" src="img/2.jpg" />
+			                <img data-u="thumb" src="img/3.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/4.jpg" />
+			                <img data-u="thumb" src="img/5.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/6.jpg" />
+			                <img data-u="thumb" src="img/7.jpg" />
+			            </div>
+			            <div>
+			                <img data-u="image" src="img/8.jpg" />
+			                <img data-u="thumb" src="img/1.jpg" />
+			            </div>
+			            <a data-u="any" href="https://www.jssor.com" style="display:none">javascript slider</a>
+			        </div>
+			        <!-- Thumbnail Navigator -->
+			        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:170px;" data-autocenter="1">
+			            <!-- Thumbnail Item Skin Begin -->
+			            <div data-u="slides" style="cursor: default;">
+			                <div data-u="prototype" class="p">
+			                    <div class="w">
+			                        <div data-u="thumbnailtemplate" class="t"></div>
+			                    </div>
+			                    <div class="c"></div>
+			                </div>
+			            </div>
+			            <!-- Thumbnail Item Skin End -->
+			        </div>
+			        <!-- Arrow Navigator -->
+			        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+			        <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+			    </div>			
+			</div>
+		</main>
+		
+		<!--*********Modals**********-->
+			<div class="modal">
+				<div class="modalBody">
+					<form action="" id="doctorUpdate">
+						<p class="formText">Add New Doctor</p>
+						<p>Doctor Name: <input type="text" /></p>
+						<p>Specialization: <input type="text" /></p>
+						<p><input class="upButton" type="submit" value="Update" /><p>
+					</form>
+					
+					<form action="" id="patientUpdate">
+						<p class="formText">Add New Patient</p>
+						<p>Patient Name: <input type="text" /></p>
+						<p>Sex: <input type="text" /></p>
+						<p>Address: <input type="text" /></p>
+						<p><input class="upButton" type="submit" value="Update" /><p>
+					</form>
+					
+					<form action="" id="addAppointment">
+					<p class="formText">Add New Appointment</p>
+						<p>Doctor Id: <input type="text" /></p>
+						<p>Patient Id: <input type="text" /></p>
+						<p>Time: <input type="time" /></p>
+						<p>Date: <input type="date" /></p>
+						<p><input class="upButton" type="submit" value="Update" /><p>
+					</form>
+				</div>
+			</div>
+
+				<script>
+			$(document).ready(function() {
+			var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+			var newDate = new Date();
+			newDate.setDate(newDate.getDate());
+			$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+			setInterval( function() {
+	    	var seconds = new Date().getSeconds();
+	    	$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);},1000);
+	    	setInterval( function() {
+	   		 var minutes = new Date().getMinutes();
+	   		 $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);},1000);
+	    	setInterval( function() {
+	    	var hours = new Date().getHours();
+	    	$("#hours").html(( hours < 10 ? "0" : "" ) + hours);}, 1000);
+	    	}); 	
+		</script>
+		<script type="text/javascript">jssor_1_slider_init();</script>
+
+	</body>
+</html>
